@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="asset/css/fonts/stylesheet.css">
+    <style>
+        *{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#456480;
+    --secondary:#aaaaaa;
+    --black:#000000;
+    --white:#ffffff;
+    --font: 'open sans', Helvetica, Arial, sans-serif;
+    --tertiary:#b5b2b2;
+    --gutter-width:12px;
+}
+
+.w-1 {width: 8.33%;
+    padding: 0px var(--gutter-width);}
+.w-2 {width: 16.66%;
+    padding: 0px var(--gutter-width);}
+.w-3 {width: 25%;
+    padding: 0px var(--gutter-width);}
+.w-4 {width: 33.33%;
+    padding: 0px var(--gutter-width);}
+.w-5 {width: 41.66%;
+    padding: 0px var(--gutter-width);}
+.w-6 {width: 50%;
+    padding: 0 var(--gutter-width);}
+.w-7 {width: 58.33%;
+    padding: 0px var(--gutter-width);}
+.w-8 {width: 66.66%;
+    padding: 0px var(--gutter-width);}
+.w-9 {width: 75%;
+    padding: 0px var(--gutter-width);}
+.w-10 {width: 83.33%;
+    padding: 0px var(--gutter-width);}
+.w-11 {width: 91.66%;
+    padding: 0px var(--gutter-width);}
+.w-12 {width: 100%;
+    padding: 0px var(--gutter-width);}
+.w-69 {width: 25%;}    
+
+a{
+    text-decoration: none;
+}
+.menu li{
+    list-style: none;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.vh-100{
+    height:100vh;
+}
+.py-100{
+    padding:100px 0px;
+}
+.d-flex{
+    display:flex;
+}
+.f-wrap{
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-content-center{
+    align-content: center;
+}
+.text-center{
+    text-align: center;
+}
+.container{
+    max-width: 1320px;
+    margin:0 auto;
+}
+/* Header Bar */
+nav .menu a{
+    font-size: 18px;
+    padding:0px 13px;
+    color:var(--secondary);
+    font-family: 'Oswald';
+    font-weight: 600;
+    transition:all  ease;
+}
+.menu a:hover{
+    border-bottom: 3px solid black;
+}
+header .logo img{
+    width:60%;
+}
+nav .menu a:first-child{
+    color:var(--black);
+}
+nav .menu a:hover{
+    color:var(--black);
+}
+nav .menu a:last-child{
+    color:var(--black);
+    font-size:15px;
+    padding:0px 38px;
+}
+nav .menu a:last-child{
+    border-left:1px solid #b5b2b2;
+    border-right:1px solid #b5b2b2;
+    padding:25px;
+}
+
+/* Main Banner */
+
+.main_banner{
+    background-image: url(../css/images/tender-couple-bg-1500x1000.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main_content {
+    width: 500px;
+    font-family:var(--font);
+}
+.main_content .head{
+    font-size:40px;
+    font-weight: 600;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+.main_content .dsc{
+    font-size:18px;
+    color:var(--secondary);
+    margin:15px 0px;
+}
+.main_content button{
+    margin-top:20px;
+    padding: 12px 16px;
+    font-size: 15px;
+    background-color: #456480;
+    color:white;
+    font-weight: 400;
+    border-color: #456480;
+    border:3px solid;
+    color:var(--white);
+    margin-left: 18px;
+    padding: 12px 16px;
+    border-radius: 5px;
+    transition: all 1s ease-in-out;
+}
+.main_content button:hover{
+    background-color:var(--tertiary);
+    border-color: var(--secondary);
+    color:var(--black);
+} 
+.main_content .btn1{
+    background-color: var(--white);
+    border:3px solid var(--black);
+    color:rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 0, 0, 0.6);
+    margin-left: 18px;
+    padding: 12px 16px;
+    border-radius: 5px;
+}
+
+/* Photos Section */
+.phts img{
+    max-width: 100%;
+}
+.phts img:hover{
+    opacity: 0.5;
+}
+.phts h2{
+    text-align: center;
+    font-family: 'Oswald';
+    color:#f9ce34;
+}
+
+/* Products Section*/
+.products .b_card img{
+    width:100%;
+}
+.products .head{
+    font-size: 30px;
+    color:#444444;
+    font-family: 'Open Sans';
+}
+.products .b_card .head{
+    font-family: 'open sans', Helvetica, Arial, sans-serif;
+    padding-top: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:var(--black);
+}
+.products .card{
+    margin:40px 0px;
+}
+.products .content .dsc{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--tertiary);
+    margin:0px 7px;
+}
+.products .content{
+    margin:10px 7px;
+}
+.products .content .dsc1{
+    color: #6786a1;
+    margin:0px 7px;
+}
+.products .sale{
+    font-size: 50px;
+}
+
+/* Two cards Section */
+
+.two_cards .cards1 img{
+    max-width: 100%;
+}
+.two_cards .head{
+    font-size: 30px;
+    font-weight: 500;
+    color: #444444;
+    font-family: 'Oswald';
+}
+.two_cards .dsc{
+    font-size: 15px;
+    color: #a2a2a2;
+    font-family: 'Oswald';
+    margin: 0.85em 0;
+}
+.two_cards .b_card .dsc1{
+    margin:0px 10px;
+    margin-top:13px;
+}
+.two_cards .b_card .sale i{
+    font-size: 50px;
+}
+.two_cards .cards1 .b_card .head{
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #444444;
+}
+.two_cards .cards1 .b_card .content .dsc1{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+    color:#6786a1;
+}
+.two_cards .cards1 .b_card .content .dsc{
+    font-weight: 600;
+    font-size: 15px;
+}
+.two_cards .lady img{
+    max-width: 100%;
+}
+/* About Us */
+.container .cards7 .main i{
+    max-width:100%;
+    font-size: 27px;
+    border: 0.5px solid #e1e1e1;
+    border-radius: 50px;
+    padding: 25px;
+    margin:0px 22px;
+    color:var(--black);
+}
+.container .cards7 .main .head{
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    font-family: 'Oswald';
+    line-height: 1.1em;
+}
+.container .cards7 .main .dsc{
+    color: #a2a2a2;
+    font-size: 15px;
+    margin: 0.85em 0;
+    font-family: 'open sans', Helvetica, Arial, sans-serif;
+}
+.container .cards7 .main .content{
+    margin:20px 0px;
+}
+
+/* Name Email Section */
+.name{
+    background-color: #001219;
+}
+.name .content{
+    color:white;
+    font-family: 'Oswald';
+    padding: 50px 0px;
+}
+.content .dsc{
+    margin: 30px 20px;
+    width: 100%;
+}
+.content .dsc input{
+    padding:8px;
+    margin:0px 8px;
+    border:2px solid white;
+    background-color:transparent;
+    color:white;
+    font-family: 'Oswald';
+}
+.content .dsc .btn{
+    width:100px;
+    margin:0px 20px;
+    display: inline-block;
+    text-align: center;
+    color:white;
+    background-color: #c1121f;
+    transition: all 0.5s ease;
+}
+.dsc .btn:hover{
+    background-color: #6786a1;
+}
+
+/* Footer Section */
+.last{
+    background-color: #6786a1;
+}
+.container .card li{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+.container .card h3{
+    color: #9db8cc;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-family: 'open sans', Helvetica, Arial, sans-serif;
+    line-height: 1.1em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container .card p{
+    color: white;
+    margin: 0.85em 0em;
+    font-family: 'Oswald';
+    text-align: center;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container d-flex f-wrap align-center justify-between">
+            <div class="logo">
+                <img src="asset/css/images/logo_shop.png" alt="">
+            </div>
+            <nav>
+                <ul class="menu d-flex f-wrap align-center">
+                    <a href="">
+                        <li>Home</li>
+                    </a>
+                    <a href="">
+                        <li>Shop</li>
+                    </a>
+                    <a href="">
+                        <li>About</li>
+                    </a>
+                    <a href="">
+                        <li>Contact</li>
+                    </a>
+                    <a href="">
+                        <li>Blog</li>
+                    </a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main Section -->
+    <section class="main_banner">
+        <div class="container vh-100 row align-content-center">
+            <div class="main_content">
+                <h1 class="head">New spring edition for women and men now available</h1>
+                <span class="dsc">The new beautiful spring collection, created by star designer Konrad Kries is now
+                    available.</span>
+                <div class="btn">
+                    <button>Women’s Collection</button>
+                    <button class="btn1">Men’s Collection</button>
+                </div>
+            </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="photos">
+        <div class="phts d-flex">
+            <div class="w-69">
+                <img src="asset/css/images/winter-girl-small-495x400.jpg" alt="">
+                <h2>NEW WINTER COLLECTION</h2>
+            </div>
+            <div class="w-69">
+                <img src="asset/css/images/couple-sitting-495x400.jpg" alt="">
+                <h2>LATEST STREET CLOTHES</h2>
+            </div>
+            <div class="w-69">
+                <img src="asset/css/images/girls-shopping-desat-495x400.jpg" alt="">
+                <h2>FRESH SPORTS WEAR</h2>
+            </div>
+            <div class="w-69">
+                <img src="asset/css/images/hipster-girls-working-495x400.jpg" alt="">
+                <h2>FUNKY ACCESSORIES</h2>
+            </div>
+        </div>
+    </section>
+    <!-- Products Section -->
+    <section class="products py-100">
+        <div class="container">
+            <div class="head text-center">
+                <h1>Recent Top Sellers</h1>
+            </div>
+            <div class="card d-flex">
+                <div class="w-3">
+                    <div class="b_card text-center">
+                        <img src="asset/css/images/woman1.jpg" alt="">
+                        <h2 class="head">Green Blouse “Daria”</h2>
+                        <div class="content row justify-center">
+                            <del class="dsc">$49.00</del>
+                            <span class="dsc1">$39.00</span>
+                            <div class="sale">
+                                <i class="fa-brands fa-salesforce"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-3">
+                    <div class="b_card text-center">
+                        <img src="asset/css/images/man2.jpg" alt="">
+                        <h2 class="head">Green Blouse “Daria”</h2>
+                        <div class="content row justify-center">
+                            <del class="dsc">$49.00</del>
+                            <span class="dsc1">$39.00</span>
+                            <div class="sale">
+                                <i class="fa-brands fa-salesforce"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-3">
+                    <div class="b_card text-center">
+                        <img src="asset/css/images/woman1 (1).jpg" alt="">
+                        <h2 class="head">Green Blouse “Daria”</h2>
+                        <div class="content row justify-center">
+                            <del class="dsc">$49.00</del>
+                            <span class="dsc1">$39.00</span>
+                            <div class="sale">
+                                <i class="fa-brands fa-salesforce"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-3">
+                    <div class="b_card text-center">
+                        <img src="asset/css/images/woman5.jpg" alt="">
+                        <h2 class="head">Green Blouse “Daria”</h2>
+                        <div class="content row justify-center">
+                            <del class="dsc">$49.00</del>
+                            <span class="dsc1">$39.00</span>
+                            <div class="sale">
+                                <i class="fa-brands fa-salesforce"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Two Cards Section -->
+    <section class="two_cards py-100">
+        <div class="cards align-center d-flex">
+            <div class="w-6">
+                <h3 class="head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                <p class="dsc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+                    massa quis enim</p>
+                <div class="cards1 d-flex">
+                    <div class="w-4">
+                        <div class="b_card text-center">
+                            <img src="asset/css/images/woman1.jpg" alt="">
+                            <h2 class="head">Blue Blouse</h2>
+                            <div class="content row justify-center">
+                                <span class="dsc1">$89.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-4">
+                        <div class="b_card text-center">
+                            <img src="asset/css/images/man2.jpg" alt="">
+                            <h2 class="head">Casual Collection</h2>
+                            <div class="content row justify-center">
+                                <span class="dsc1">$120.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-4">
+                        <div class="b_card text-center">
+                            <img src="asset/css/images/woman1 (1).jpg" alt="">
+                            <h2 class="head">Dark Skirt “Erebos”</h2>
+                            <div class="content row justify-center">
+                                <del class="dsc">$22.00</del>
+                                <span class="dsc1">$19.00</span>
+                                <div class="sale">
+                                    <i class="fa-brands fa-salesforce"></i>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>    
+                <div class="cards1 d-flex">
+                    <div class="w-4">
+                        <div class="b_card text-center">
+                            <img src="asset/css/images/woman1.jpg" alt="">
+                            <h2 class="head">Green Blouse</h2>
+                            <div class="content row justify-center">
+                                <span class="dsc1">$55.00</span>
+                                <div class="sale">
+                                    <i class="fa-brands fa-salesforce"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-4">
+                        <div class="b_card text-center">
+                            <img src="asset/css/images/woman1.jpg" alt="">
+                            <h2 class="head">Green Blouse “Daria”</h2>
+                            <div class="content row justify-center">
+                                <del class="dsc">$49.00</del>
+                                <span class="dsc1">$39.00</span>
+                                <div class="sale">
+                                    <i class="fa-brands fa-salesforce"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-4">
+                        <div class="b_card text-center">
+                            <img src="asset/css/images/woman1.jpg" alt="">
+                            <h2 class="head">Grouped Custom Product</h2>
+                            <div class="content row justify-center">
+                                <del class="dsc">$20.00-</del>
+                                <span class="dsc1">-$229.90</span>
+                                <div class="sale">
+                                    <i class="fa-brands fa-salesforce"></i>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="w-6">
+                <div class="lady">
+                    <img src="asset/css/images/lady-in-blue.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About us Section -->
+    <section class="about py-100">
+        <div class="container">
+            <div class="cards7 d-flex justify-center">
+                <div class="w-6">
+                    <div class="main align-center d-flex">
+                        <div class="logo ">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="head">WORLDWIDE DELIVERY</h3>
+                            <p class="dsc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-6">
+                    <div class="main align-center d-flex">
+                        <div class="logo">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="head">FREE SHIPPING</h3>
+                            <p class="dsc">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards7 d-flex justify-center">
+                <div class="w-6">
+                    <div class="main align-center d-flex">
+                        <div class="logo">
+                        <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="head">SECURE PAYMENT</h3>
+                            <p class="dsc">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-6">
+                    <div class="main align-center d-flex">
+                        <div class="logo">
+                        <i class="fa-solid fa-life-ring"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="head">24/7 SUPPORT</h3>
+                            <p class="dsc">enean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Name Email Section -->
+    <section class="name">
+        <div class="content text-center">
+            <h2 class="head">Want to stay up to date? Subscribe to our Newsletter!</h2>
+            <div class="dsc justify-center d-flex">
+                <input type="text" value="" placeholder="Name*">
+                <input type="text" value="" placeholder="E-Mail*">
+                <button class="btn">Subscribe</button>
+            </div>
+        </div>    
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="last">
+        <div class="container">
+            <div class="card d-flex ">
+                <div class="w-3">
+                    <h3>STORE OPENING HOURS</h3>
+                    <ul>
+                        <li>Mo-Fr: 8:00-19:00</li>
+                        <li>Sa: 8:00-14:00</li>
+                        <li>So: closed</li>
+                    </ul>
+                </div>
+                <div class="w-3">
+                    <h3>ENFOLD FLAGSHIP STORE</h3>
+                    <p>Shopping Mall Rodeo Drive</p>                   
+                    <p>Los Angeles, USA</p><br>
+                    <p>office-flagship@enfold-shop.com</p>
+                    <p>555-8653 364</p>
+                </div>
+                <div class="w-3">
+                    <h3>ENFOLD BB</h3>
+                    <p>8500 Beverly Boulevard</p>
+                    <p>Los Angeles, USA </p><br>
+                    <p>office-bb@enfold-shop.com</p>
+                    <p>555-3477 948</p>
+                </div>
+                <div class="w-3">
+                    <h3>ENFOLD RB</h3>
+                    <p>Robertson Boulevard</p>
+                    <p>Los Angeles, USA</p><br>
+                    <p>office-rb@enfold-shop.com</p>
+                    <p>555-4457 223</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
